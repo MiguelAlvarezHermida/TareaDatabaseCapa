@@ -7,7 +7,7 @@ class TweetController {
 
     async getTweets() {
         const tweets = await this.service.getAllTweets();
-        return tweets;
+        return tweets.filter(tweet => tweet.id % 2 === 0);
     }
 }
 

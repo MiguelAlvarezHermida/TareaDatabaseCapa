@@ -7,7 +7,7 @@ class UserController {
 
     async getUsers() {
         const users = await this.service.getAllUsers();
-        return users;
+        return users.filter(user => user.id % 2 === 0); 
     }
 }
 
